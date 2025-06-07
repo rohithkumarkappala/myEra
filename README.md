@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+MyEra Sticker Canvas
+A React-based web application built for the MyEra Frontend Internship mini-task. This app allows users to place and drag stickers on a 600x400 canvas using react-konva, with features to add stickers via buttons, drag them, download the canvas as a PNG, and optionally delete stickers or snap them to a 40px grid.
+Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+600x400 Canvas: A fixed-size Konva canvas for placing and arranging stickers.
+Sticker Buttons: Three buttons with PNG images to add stickers at a default position.
+Draggable Stickers: Stickers can be dragged anywhere on the canvas with position persistence.
+Download Canvas: A button to export the canvas as a PNG file.
+Bonus: Double-Click Deletion: Double-click a sticker to remove it from the canvas.
+Bonus: Grid Snapping: New and dragged stickers snap to a 40x40 pixel grid for alignment.
 
-## Available Scripts
+Setup
 
-In the project directory, you can run:
+Clone the Repository:git clone <your-repo-url>
+cd myera-sticker-app
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install Dependencies:npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Start the Development Server:npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Open the App:
+Visit http://localhost:3000 in your browser to use the app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Demo
+[Link to a 1-minute demo video or GIF, if included]Note: A demo video or GIF showcasing the app's functionality (adding, dragging, downloading stickers, and bonus features) can be added here if provided.
+Technologies
 
-### `npm run eject`
+React: For building the user interface with functional components and state management.
+react-konva: A React wrapper for Konva to create an interactive canvas.
+Konva: For handling canvas operations like layers, images, and drag-and-drop.
+use-image: For loading sticker images in a React-friendly way.
+CSS: For styling the layout (Flexbox for canvas and button arrangement).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Project Structure
+myera-sticker-app/
+├── public/
+│   ├── index.html           # Main HTML file
+│   └── stickers/            # Sticker PNGs (sticker1.png, sticker2.png, sticker3.png)
+├── src/
+│   ├── components/
+│   │   ├── Canvas.js        # Konva canvas and sticker rendering
+│   │   ├── StickerButton.js # Sticker button component
+│   ├── App.js               # Main app component
+│   ├── App.css              # Styles for layout
+│   ├── index.js             # React entry point
+├── README.md                # This file
+├── package.json             # Dependencies and scripts
+├── .gitignore               # Ignores node_modules, build/, etc.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Notes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Sticker images are stored in public/stickers/ and must be small (e.g., 50x50 pixels) PNGs.
+The app runs entirely in the browser with no backend or data persistence.
+The bonus features (double-click deletion and grid snapping) are implemented for enhanced functionality.
+Git commits are organized with clear messages (e.g., "Add canvas setup," "Implement sticker dragging").
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Usage
 
-## Learn More
+Click any of the three sticker buttons to add a sticker to the canvas.
+Drag stickers to reposition them (snaps to a 40px grid if implemented).
+Double-click a sticker to delete it (if implemented).
+Click the "Download Canvas" button to save the canvas as a PNG file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
